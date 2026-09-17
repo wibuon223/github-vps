@@ -1,0 +1,9 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "forwardPorts": [6080, 5901],
+  "portsAttributes": {
+    "6080": { "label": "noVNC Desktop", "onAutoForward": "openBrowser" },
+    "5901": { "label": "VNC" }
+  },
+  "hostRequirements": { "cpus": 4, "memory": "16gb" }
+}
