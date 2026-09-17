@@ -1,9 +1,18 @@
 {
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": { "password": "vps12345" }
+  },
   "forwardPorts": [6080, 5901],
   "portsAttributes": {
     "6080": { "label": "noVNC Desktop", "onAutoForward": "openBrowser" },
     "5901": { "label": "VNC" }
   },
-  "hostRequirements": { "cpus": 4, "memory": "16gb" }
+  "hostRequirements": { "cpus": 4, "memory": "16gb" },
+  "updateContentCommand": "echo devcontainer-ready",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.remote-containers"]
+    }
+  }
 }
